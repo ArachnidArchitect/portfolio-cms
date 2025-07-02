@@ -50,3 +50,7 @@ button{
 button:hover{
     background-color: rgb(2, 210, 210);
 }
+#message {
+  margin-top: 1rem;
+  font-weight: bold;
+}
