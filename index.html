@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload Projects</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
     <div>
@@ -40,10 +44,10 @@
 
       const formData = new FormData();
       formData.append("image", fileInput.files[0]);
-      formData.append("name", title);
+      formData.append("title", title);
       formData.append("description", description);
-      formData.append("github", github);
-      formData.append("vercel", vercel);
+      formData.append("liveLink", github);
+      formData.append("repoLink", vercel);
 
       try {
         const response = await fetch("https://portfolio-cms-74ce.onrender.com/upload?", {
